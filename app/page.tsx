@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { RetroWindow } from "@/components/RetroWindow";
+import { FloatingDecorations } from "@/components/FloatingDecorations";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -10,7 +11,7 @@ export default function Home() {
 
       {!isLoading && (
         <>
-          a78bfa f5f0ff
+          {/* background */}
           <div
             className="fixed inset-0 z-0 font-sans"
             style={{
@@ -26,6 +27,11 @@ export default function Home() {
               <p>hello</p>
             </RetroWindow>
           </div>
+
+          {/* Floating decoration */}
+          <FloatingDecorations />
+          {/* Main content */}
+          <main></main>
         </>
       )}
     </>
