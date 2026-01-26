@@ -1,13 +1,15 @@
 "use client";
 import { useState } from "react";
+import { LoadingScreen } from "@/components/LoadingScreen";
 import { RetroWindow } from "@/components/RetroWindow";
 import { FloatingDecorations } from "@/components/FloatingDecorations";
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   return (
     <>
       {/* isLoading starts true, trigger loading bar  */}
+      {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
 
       {!isLoading && (
         <>
