@@ -3,6 +3,7 @@ import { useState } from "react";
 import { LoadingScreen } from "@/components/LoadingScreen";
 import { RetroWindow } from "@/components/RetroWindow";
 import { FloatingDecorations } from "@/components/FloatingDecorations";
+import { HeroSection } from "@/components/sections/HeroSection";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -19,21 +20,19 @@ export default function Home() {
             style={{
               backgroundColor: "#D6C8FF",
               backgroundImage: `
-              linear-gradient(to right, #BDAAF2 1px, transparent 1px),
-                linear-gradient(to bottom, #BDAAF2 1px, transparent 1px)
+              linear-gradient(to right, #BDAAF2  2px, transparent 2px),
+                linear-gradient(to bottom, #BDAAF2  2px, transparent 2px)
               `,
-              backgroundSize: "24px 24px",
+              backgroundSize: "46px 46px",
             }}
-          >
-            <RetroWindow title="test">
-              <p>hello</p>
-            </RetroWindow>
-          </div>
+          />
 
           {/* Floating decoration */}
           <FloatingDecorations />
           {/* Main content */}
-          <main></main>
+          <main className="relative z-10 h-screen ">
+            <HeroSection />
+          </main>
         </>
       )}
     </>
