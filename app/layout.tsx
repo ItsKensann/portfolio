@@ -14,7 +14,7 @@ const pressStart = Press_Start_2P({
 });
 
 export const metadata: Metadata = {
-  title: "itskensan",
+  title: "itskensan.dev",
   description: "Kensan Putra developer portfolio",
 };
 

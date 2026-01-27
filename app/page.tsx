@@ -4,6 +4,10 @@ import { LoadingScreen } from "@/components/LoadingScreen";
 import { RetroWindow } from "@/components/RetroWindow";
 import { FloatingDecorations } from "@/components/FloatingDecorations";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { AboutSection } from "@/components/sections/AboutSection";
+import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { ExperienceSection } from "@/components/sections/ExperienceSection";
+import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -30,8 +34,15 @@ export default function Home() {
           {/* Floating decoration */}
           <FloatingDecorations />
           {/* Main content */}
-          <main className="relative z-10 h-screen ">
+          <main
+            className="relative z-10 h-screen overflow-y-auto"
+            style={{ scrollSnapType: "y mandatory" }}
+          >
             <HeroSection />
+            <AboutSection />
+            <ProjectsSection />
+            <ExperienceSection />
+            <ContactSection />
           </main>
         </>
       )}

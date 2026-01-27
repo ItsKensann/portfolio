@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import { RetroWindow } from "@/components/RetroWindow";
 
-export function ExperienceSection() {
+export function ContactSection() {
   return (
-    <section id="experience" className="min-h-screen snap-start">
+    <section id="contact" className="min-h-screen snap-start">
       <motion.div>
         <div></div>
       </motion.div>
