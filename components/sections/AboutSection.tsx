@@ -47,6 +47,28 @@ export function AboutSection() {
                 {">"} Hi there! I{"'"}m a passionate developer with a love for
                 creating beautiful, user-friendly web applications.
               </p>
+              <p className="mb-4">
+                {">"} My most recent experience was interni
+              </p>
+              <p className="mb-4">
+                {">"} Other than programming, I am very passionate about fitness
+                and have really gotten into bouldering recently! (I post my
+                climbs on my Instagram)
+              </p>
+              <p className="mb-4">
+                {">"} Music is my gateway to destress, hence the Lo-Fi music
+                player implemented in this website. When I have time I like to
+                jam out my favorite songs on my acoustic guitar.
+              </p>
+              <p className="mb-4">
+                {">"} Fun fact I used spent a lot of time competing in a
+                competitive Esports video game called Valorant!
+              </p>
+            </div>
+            <div className="flex justify-between border-t-2 border-[#1a1a2e] pt-2 font-mono text-xs text-[#4a4a6a]">
+              <p>Ln 1, Col 1</p>
+              <p>100%</p>
+              <p>UTF-8</p>
             </div>
           </div>
         </RetroWindow>

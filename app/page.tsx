@@ -22,7 +22,8 @@ export default function Home() {
           <div
             className="fixed inset-0 z-0 font-sans"
             style={{
-              backgroundColor: "#D6C8FF",
+              backgroundColor:
+                "#D6C8FF linear-gradient(to right bottom, #bdaaf2, #b0b6f7, #a8c1f8, #a5cbf6, #aad3f2)",
               backgroundImage: `
               linear-gradient(to right, #BDAAF2  2px, transparent 2px),
                 linear-gradient(to bottom, #BDAAF2  2px, transparent 2px)
