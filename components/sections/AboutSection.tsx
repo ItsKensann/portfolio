@@ -48,7 +48,7 @@ export function AboutSection() {
                 creating beautiful, user-friendly web applications.
               </p>
               <p className="mb-4">
-                {">"} My most recent experience was interni
+                {">"} My most recent experience was interning at
               </p>
               <p className="mb-4">
                 {">"} Other than programming, I am very passionate about fitness
