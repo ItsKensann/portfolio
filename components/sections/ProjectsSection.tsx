@@ -54,7 +54,7 @@ const projects = [
     description: "The portfolio you are looking at right now!",
     tech: ["Next.js", "Tailwind", "Supabase"],
     link: "#",
-    github: "#",
+    github: "https://github.com/ItsKensann/portfolio",
   },
 ];
 
@@ -129,7 +129,51 @@ export function ProjectsSection() {
             className="fixed inset-0 bg-[#1a1a2e]/50 z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedProject(null)}
           >
-            <motion.div></motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <RetroWindow
+                title={`${selectedProject.name}.exe`}
+                variant="lavender"
+                onClose={() => setSelectedProject(null)}
+                className="w-full max-w-md"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <span className="">{selectedProject.icon}</span>
+                    <h3>{selectedProject.name}</h3>
+                  </div>
+
+                  <p>{selectedProject.description}</p>
+
+                  <div className="">
+                    {selectedProject.tech.map((tech) => (
+                      <span key={tech}>{tech}</span>
+                    ))}
+                  </div>
+
+                  <div className="flex gap-3 t-2">
+                    <a
+                      href={selectedProject.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live Demo
+                    </a>
+                    <a
+                      href={selectedProject.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Source
+                    </a>
+                  </div>
+                </div>
+              </RetroWindow>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

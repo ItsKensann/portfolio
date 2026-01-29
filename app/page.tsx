@@ -37,7 +37,7 @@ export default function Home() {
           {/* Main content */}
           <main
             className="relative z-10 h-screen overflow-y-auto"
-            style={{ scrollSnapType: "y mandatory" }}
+            style={{ scrollSnapType: "y mandatory", scrollBehavior: "smooth" }}
           >
             <HeroSection />
             <AboutSection />

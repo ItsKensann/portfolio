@@ -38,7 +38,7 @@ export function HeroSection() {
               >
                 <div className="w-32 h-32 md:w-50 md:h-50 p-1 bg-white border-2 border-b-[#ffffff] border-r-[#ffffff] border-t-[#808080] border-l-[#808080] shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
                   <img
-                    src="/profile_picture.jpg"
+                    // src="/profile_picture.jpg"
                     alt="Kensan Putra"
                     className="w-full h-full object-cover grayscale-[20%] contrast-[1.1]"
                   />
