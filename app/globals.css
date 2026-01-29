@@ -2,39 +2,39 @@
 @import "tw-animate-css";
 
 :root {
-  --background: #d6c8ff;
+  --background: #e8e0f0;
   --foreground: #1a1a2e;
-  --card: #fff5f7;
+  --card: #f5f0ff;
   --card-foreground: #1a1a2e;
-  --popover: #fff5f7;
+  --popover: #f5f0ff;
   --popover-foreground: #1a1a2e;
-  --primary: #ffb3c6;
+  --primary: #a78bfa;
   --primary-foreground: #1a1a2e;
-  --secondary: #c5f0c5;
+  --secondary: #93c5fd;
   --secondary-foreground: #1a1a2e;
-  --muted: #e8d5ff;
+  --muted: #c4b5fd;
   --muted-foreground: #4a4a6a;
-  --accent: #b8e0ff;
+  --accent: #7dd3fc;
   --accent-foreground: #1a1a2e;
   --destructive: #ff6b6b;
-  --destructive-foreground: #fff5f7;
+  --destructive-foreground: #f5f0ff;
   --border: #1a1a2e;
-  --input: #fff5f7;
-  --ring: #ffb3c6;
-  --chart-1: #ffb3c6;
-  --chart-2: #c5f0c5;
-  --chart-3: #b8e0ff;
-  --chart-4: #e8d5ff;
-  --chart-5: #ffe5b4;
+  --input: #f5f0ff;
+  --ring: #a78bfa;
+  --chart-1: #a78bfa;
+  --chart-2: #93c5fd;
+  --chart-3: #7dd3fc;
+  --chart-4: #c4b5fd;
+  --chart-5: #ddd6fe;
   --radius: 0px;
-  --sidebar: #fff5f7;
+  --sidebar: #f5f0ff;
   --sidebar-foreground: #1a1a2e;
-  --sidebar-primary: #ffb3c6;
+  --sidebar-primary: #a78bfa;
   --sidebar-primary-foreground: #1a1a2e;
-  --sidebar-accent: #c5f0c5;
+  --sidebar-accent: #93c5fd;
   --sidebar-accent-foreground: #1a1a2e;
   --sidebar-border: #1a1a2e;
-  --sidebar-ring: #ffb3c6;
+  --sidebar-ring: #a78bfa;
 }
 
 @theme inline {
@@ -85,5 +85,61 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  ::-webkit-scrollbar {
+    width: 24px;
+    background-color: var(--muted); /* The track */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+
+    background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 30%,
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0.2) 40%,
+      transparent 40%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.2) 60%,
+      transparent 60%,
+      transparent 70%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0.2) 80%,
+      transparent 80%
+    );
+    background-size: 10px 10px; /* Adjust this to size the lines */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #6636f7;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: block;
+    height: 16px;
+    width: 16px;
+    background-color: var(--primary);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+  }
+
+  /* Up Arrow Icon */
+  ::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M4 2L1 5h6z' fill='%231a1a2e'/%3E%3C/svg%3E");
+  }
+
+  /* Down Arrow Icon */
+  ::-webkit-scrollbar-button:vertical:increment {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M4 6L1 3h6z' fill='%231a1a2e'/%3E%3C/svg%3E");
   }
 }

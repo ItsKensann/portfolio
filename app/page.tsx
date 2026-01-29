@@ -22,13 +22,14 @@ export default function Home() {
           <div
             className="fixed inset-0 z-0 font-sans"
             style={{
-              backgroundColor:
-                "#D6C8FF linear-gradient(to right bottom, #bdaaf2, #b0b6f7, #a8c1f8, #a5cbf6, #aad3f2)",
+              backgroundColor: "#D6C8FF",
               backgroundImage: `
-              linear-gradient(to right, #BDAAF2  2px, transparent 2px),
-                linear-gradient(to bottom, #BDAAF2  2px, transparent 2px)
-              `,
-              backgroundSize: "46px 46px",
+      linear-gradient(to right, #BDAAF2 1px, transparent 1px),
+      linear-gradient(to bottom, #BDAAF2 1px, transparent 1px),
+      linear-gradient(135deg, #D6C8FF 0%, #E8DFFF 50%, #d1c7f5 100%)
+    `,
+              backgroundSize: "46px 46px, 46px 46px, 100% 100%",
+              backgroundAttachment: "fixed",
             }}
           />
 
