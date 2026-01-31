@@ -2,18 +2,19 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Folder, ExternalLink, createLucideIcon } from "lucide-react";
+import { Folder, ExternalLink, createLucideIcon, Github } from "lucide-react";
+import { siGithub } from "simple-icons";
 import { RetroWindow } from "@/components/RetroWindow";
 
 // temp projects array before i create them on the supabase database
 const projects = [
   {
     id: 1,
-    name: "Price Checker",
-    icon: "//",
+    name: "Barcode Price Checker",
+    icon: "$$",
     description:
-      "Developed full stack app for Columbia Sportswear to retrieve pricing information on any retail item.",
-    tech: ["C#", "Azure", ".NET"],
+      "Developed full stack app for Columbia Sportswear to retrieve pricing information on any retail item. Due ",
+    tech: ["C#", "Blazor", ".NET", "Azure Functions", "Cosmos DB"],
     link: "#",
     github: "#",
   },
@@ -50,7 +51,7 @@ const projects = [
   {
     id: 5,
     name: "Portfolio website",
-    icon: "**",
+    icon: "//",
     description: "The portfolio you are looking at right now!",
     tech: ["Next.js", "Tailwind", "Supabase"],
     link: "#",
@@ -139,35 +140,50 @@ export function ProjectsSection() {
                 title={`${selectedProject.name}.exe`}
                 variant="lavender"
                 onClose={() => setSelectedProject(null)}
-                className="w-full max-w-md"
+                className="w-full max-w-lg"
               >
-                <div className="space-y-4">
+                <div className="space-y-6">
                   <div className="flex items-center gap-3">
-                    <span className="">{selectedProject.icon}</span>
-                    <h3>{selectedProject.name}</h3>
+                    <span className="text-2xl font-mono bg-[#a78bfa] px-2 py-1 border-2 border-[#1a1a2e]">
+                      {selectedProject.icon}
+                    </span>
+                    <h3 className="font-mono text-xl sm:text-2xl text-[#1a1a2e]">
+                      {selectedProject.name}
+                    </h3>
                   </div>
 
-                  <p>{selectedProject.description}</p>
+                  <p className="font-sans text-lg sm:text-xl text-[#4a4a6a] leading-relaxed">
+                    {selectedProject.description}
+                  </p>
 
-                  <div className="">
+                  <div className="flex flex-wrap gap-3 mt-12">
                     {selectedProject.tech.map((tech) => (
-                      <span key={tech}>{tech}</span>
+                      <span
+                        key={tech}
+                        className="p-2 bg-[#a78bfa] border-2 border-[#1a1a2e] font-mono text-xs text-[#1a1a2e]"
+                      >
+                        {tech}
+                      </span>
                     ))}
                   </div>
 
                   <div className="flex gap-3 t-2">
                     <a
                       href={selectedProject.link}
+                      className="flex items-center gap-2 px-3 py-2 bg-[#93c5fd] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] hover:bg-[#7dd3fc] transition-colors shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)]"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
+                      <ExternalLink className="w-4 h-4" />
                       Live Demo
                     </a>
                     <a
                       href={selectedProject.github}
+                      className="flex items-center gap-2 px-3 py-2 bg-[#c4b5fd] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] hover:bg-[#a78bfa] transition-colors shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)]"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
+                      <img className="w-4 h-4" src="/github.svg" />
                       Source
                     </a>
                   </div>
