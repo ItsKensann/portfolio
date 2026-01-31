@@ -2,7 +2,7 @@
 
 import { color, motion } from "framer-motion";
 import { RetroWindow } from "@/components/RetroWindow";
-import { Mail } from "lucide-react";
+import { Mail, Send, BookUser } from "lucide-react";
 
 // TODO: add link to resume
 // name:
@@ -39,20 +39,64 @@ export function ContactSection() {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        // viewport={{once: true}}
+        viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         className="w-full max-w-lg"
       >
         <RetroWindow title="You've Got Mail - New Message" className="w-full">
-          <div></div>
+          <div className="space-y-4">
+            <div className="space-y-6 border-[#1a1a2e] pb-3">
+              <div className="flex items-center gap-6">
+                <span className="font-mono text-sm text-[#1a1a2e] w-12">
+                  Name:
+                </span>
+                <input
+                  type="name"
+                  className="text-lg font-sans p-1 border-2 w-48 resize-none focus:outline-none focus:ring-2 focus:ring-[#a78bfa]"
+                />
+              </div>
+              <div className="flex items-center gap-9">
+                <span className="font-mono text-sm text-[#1a1a2e] w-12">
+                  Email:
+                </span>
+                <input
+                  type="email"
+                  className="text-lg font-sans p-1 border-2 w-64 resize-none focus:outline-none focus:ring-2 focus:ring-[#a78bfa]"
+                />
+              </div>
+            </div>
+
+            {/* Message area */}
+            <div className="space-y-3 mt-8">
+              <textarea
+                placeholder="Type your message here..."
+                className="w-full h-48 p-3 bg-[#f5f0ff] border-2 border-[#1a1a2e] font-sans text-lg placeholder-[#4a4a6a]/50 resize-none focus:outline-none focus:ring-2 focus:ring-[#a78bfa]"
+              />
+              <button
+                type="button"
+                className="flex items-center gap-2 px-4 py-2 bg-[#a78bfa] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] hover:bg-[#8b5cf6] transition-colors shadow-[4px_4px_0px_0px_rgba(26,26,46,0.8)] hover:shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)] hover:translate-x-[2px] hover:translate-y-[2px] hover:cursor-pointer"
+              >
+                <Send className="w-4 h-4" />
+                Send Message
+              </button>
+            </div>
+          </div>
         </RetroWindow>
       </motion.div>
+
+      <button
+        type="button"
+        className="mt-2 flex items-center gap-2 px-4 py-2 bg-[#7dd3fc] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] transition-colors hover:bg-[#33BBFA] shadow-[4px_4px_0px_0px_rgba(26,26,46,0.8)] hover:shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)] hover:translate-x-[2px] hover:translate-y-[2px] hover:cursor-pointer"
+      >
+        <BookUser className="w-6 h-6" />
+        View Full Resume
+      </button>
 
       {/* Footer */}
       <motion.footer
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        // viewport={{ once: true }}
+        viewport={{ once: true }}
         transition={{ delay: 0.6, duration: 0.5 }}
         className="w-full max-w-4xl text-center mt-8"
       >
