@@ -48,7 +48,7 @@ export default function Home() {
               backgroundImage: `
       linear-gradient(to right, #BDAAF2 1px, transparent 1px),
       linear-gradient(to bottom, #BDAAF2 1px, transparent 1px),
-      linear-gradient(135deg, #D6C8FF 0%, #E8DFFF 50%, #d1c7f5 100%)
+      linear-gradient(135deg, #D6C8FF 0%, #E8DFFF 50%, #c9bfed 100%)
     `,
               backgroundSize: "46px 46px, 46px 46px, 100% 100%",
               backgroundAttachment: "fixed",
@@ -57,6 +57,11 @@ export default function Home() {
 
           {/* Floating decoration */}
           <FloatingDecorations />
+
+          <audio controls>
+            <source src="cafe_1.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
 
           <motion.div className="fixed bottom-4 left-4 z-50 flex md:flex-row gap-3 items-start md:items-center">
             {socialLinks.map((social, index) => (

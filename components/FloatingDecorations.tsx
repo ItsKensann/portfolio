@@ -17,7 +17,7 @@ const decorations = [
   { symbol: ">>", top: "80%", right: "10%", delay: 1.1 },
 ];
 
-const colors = ["#a78bfa", "#93c5fd", "#c4b5fd", "#7dd3fc"];
+const colors = ["#a78bfa", "#93a3fd", "#c4b5fd", "#cb7dfc"];
 
 export function FloatingDecorations() {
   return (
@@ -49,10 +49,6 @@ export function FloatingDecorations() {
           }}
         >
           {dec.symbol}
-          <a
-            href="https://www.flaticon.com/free-icons/retro"
-            title="retro icons"
-          ></a>
         </motion.div>
       ))}
     </div>
