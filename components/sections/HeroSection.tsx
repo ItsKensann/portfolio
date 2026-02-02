@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { RetroWindow } from "@/components/RetroWindow";
+import { Typewriter } from "@/components/Typewriter";
 
 export function HeroSection() {
   return (
@@ -18,7 +19,7 @@ export function HeroSection() {
             <h1 className="font-mono text-2xl sm:text-3xl md:text-4xl text-[#1a1a2e] leading-tight">
               Hello world
               <br></br>
-              I'm Kensan Putra
+              <Typewriter text="I'm Kensan Putra" />
             </h1>
             <div className="h-1 bg-[#1a1a2e] w-48" />
 
@@ -27,11 +28,11 @@ export function HeroSection() {
               <div className="flex-1 space-y-4">
                 <p className="font-sans text-lg sm:text-xl md:text-2xl text-[#4a4a6a] leading-relaxed">
                   Recent Computer Science graduate with a passion for creating,
-                  currently looking for Software Engineer full-time roles.
+                  currently looking for Software
+                  <Typewriter text=" Engineer full-time roles." delay={20} />
                 </p>
               </div>
 
-              {/* Image Side - Styled like a retro frame */}
               <motion.div
                 // whileHover={{ scale: 1.05 }}
                 className="relative shrink-0"
