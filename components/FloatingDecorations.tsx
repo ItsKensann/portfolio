@@ -49,6 +49,10 @@ export function FloatingDecorations() {
           }}
         >
           {dec.symbol}
+          <a
+            href="https://www.flaticon.com/free-icons/retro"
+            title="retro icons"
+          ></a>
         </motion.div>
       ))}
     </div>
