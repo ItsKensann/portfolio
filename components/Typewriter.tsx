@@ -26,7 +26,7 @@ export function Typewriter({ text, delay = 50, className }: TypeWriterProps) {
   }, [currentIndex, delay, text]);
 
   return (
-    <span>
+    <span className={`${className}`}>
       {displayText}
       {currentIndex < text.length && <span className="animate-pulse">|</span>}
     </span>

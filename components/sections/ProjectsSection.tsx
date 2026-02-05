@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Folder, ExternalLink, createLucideIcon, Github } from "lucide-react";
 import { siGithub } from "simple-icons";
 import { RetroWindow } from "@/components/RetroWindow";
+import { Typewriter } from "../Typewriter";
 
 // temp projects array before i create them on the supabase database
 const projects = [

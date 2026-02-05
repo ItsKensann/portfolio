@@ -1,19 +1,21 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { BookUser } from "lucide-react";
 import { RetroWindow } from "@/components/RetroWindow";
 
 export function AboutSection() {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8 snap-start"
+      className="min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8 snap-start gap-4"
     >
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 1 }}
         className="w-full max-w-3xl"
       >
         <RetroWindow
@@ -47,9 +49,7 @@ export function AboutSection() {
                 {">"} Hi there! I{"'"}m a passionate developer with a love for
                 creating beautiful, user-friendly web applications.
               </p>
-              <p className="mb-4">
-                {">"} My most recent experience was interning at
-              </p>
+
               <p className="mb-4">
                 {">"} Other than programming, I am very passionate about fitness
                 and have really gotten into bouldering recently! (I post my
@@ -72,6 +72,24 @@ export function AboutSection() {
             </div>
           </div>
         </RetroWindow>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex items-center justify-center mt-8"
+        >
+          <Link href="/resume">
+            <button
+              type="button"
+              className="mt-2 flex items-center gap-2 px-4 py-2 bg-[#7dd3fc] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] transition-colors hover:bg-[#33BBFA] shadow-[4px_4px_0px_0px_rgba(26,26,46,0.8)] hover:shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)] hover:translate-x-[2px] hover:translate-y-[2px] hover:cursor-pointer"
+            >
+              <BookUser className="w-6 h-6" />
+              View Full Resume
+            </button>
+          </Link>
+        </motion.div>
       </motion.div>
     </section>
   );
