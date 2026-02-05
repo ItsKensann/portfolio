@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
-import { LoadingScreen } from "@/components/LoadingScreen";
 import { motion } from "framer-motion";
+import { LoadingScreen } from "@/components/LoadingScreen";
 import { FloatingDecorations } from "@/components/FloatingDecorations";
+import { MusicPlayer } from "@/components/MusicPlayer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
@@ -58,10 +59,7 @@ export default function Home() {
           {/* Floating decoration */}
           <FloatingDecorations />
 
-          <audio controls>
-            <source src="cafe_1.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
-          </audio>
+          <MusicPlayer />
 
           <motion.div className="fixed bottom-4 left-4 z-50 flex md:flex-row gap-3 items-start md:items-center">
             {socialLinks.map((social, index) => (
