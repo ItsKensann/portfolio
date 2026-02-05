@@ -54,7 +54,11 @@ export function ExperienceSection() {
         transition={{ duration: 0.6 }}
         className="w-full max-w-3xl"
       >
-        <RetroWindow title="Experience" variant="lavender" className="w-full">
+        <RetroWindow
+          title="experience.sys"
+          variant="lavender"
+          className="w-full"
+        >
           <div className="space-y-2 font-mono text-sm sm:text-base">
             <div className="flex items-center gap-2">
               <FolderOpen className="w-5 h-5 text-[#a78bfa] fill-[#c4b5fd] stroke-[#1a1a2e]" />

@@ -76,7 +76,7 @@ export function ProjectsSection() {
         transition={{ duration: 0.6 }}
         className="w-full max-w-4xl"
       >
-        <RetroWindow title="My Projects - File Explorer" variant="blue">
+        <RetroWindow title="my_projects - file_explorer" variant="blue">
           <div className="space-y-4">
             {/* File path toolbar */}
             <div className="flex gap-2 border-b-2 border-[#1a1a2e] pb-2">
