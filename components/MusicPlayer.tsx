@@ -6,9 +6,12 @@ import { Play, Pause, SkipBack, SkipForward, Volume2 } from "lucide-react";
 import { RetroWindow } from "./RetroWindow";
 
 const tracks = [
-  { name: "dreamer", artist: "Kensan", src: "/cafe_1.mp3" },
-  { name: "sonder", artist: "Kensan", src: "/cafe_6.mp3" },
-  { name: "sky high", artist: "Kensan", src: "/cafe_7.mp3" },
+  { name: "dreamer", artist: "Kensan", src: "/dreamer.mp3" },
+  { name: "sonder", artist: "Kensan", src: "/sonder.mp3" },
+  { name: "fly high", artist: "Kensan", src: "/fly_high.mp3" },
+  { name: "happy days", artist: "Kensan", src: "/happy_days.mp3" },
+  { name: "restless", artist: "Kensan", src: "/restless.mp3" },
+  { name: "playroom", artist: "Kensan", src: "/playroom.mp3" },
 ];
 
 export function MusicPlayer() {
