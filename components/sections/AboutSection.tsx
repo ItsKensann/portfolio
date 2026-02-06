@@ -46,23 +46,26 @@ export function AboutSection() {
             {/* Text box */}
             <div className="bg-[#f5f0ff] border-2 border-[#1a1a2e] p-4 min-h-[300px] font-sans text-lg sm:text-xl md:text-2xl text-[#1a1a2e] leading-relaxed">
               <p className="mb-4">
-                {">"} Hi there! I{"'"}m a passionate developer with a love for
-                creating beautiful, user-friendly web applications.
+                {">"} I discovered computer science through a UI course in high
+                school. Coming from an art background, I was immediately drawn
+                to the intersection of design and engineering functional tools
+                that people enjoy using.
               </p>
 
               <p className="mb-4">
-                {">"} Other than programming, I am very passionate about fitness
-                and have really gotten into bouldering recently! (I post my
-                climbs on my Instagram)
+                {">"} While most of my creative work happens indoors, I stay
+                active through weightlifting and have recently gotten hooked on
+                bouldering.
               </p>
               <p className="mb-4">
-                {">"} Music is my gateway to destress, hence the Lo-Fi music
-                player implemented in this website. When I have time I like to
-                jam out my favorite songs on my acoustic guitar.
+                {">"} Music is my reset button. Feel free to vibe to some of the
+                custom tracks I've made in the player below. When I'm offline,
+                I'm usually jamming on my acoustic guitar.
               </p>
               <p className="mb-4">
-                {">"} Fun fact I used spent a lot of time competing in a
-                competitive Esports video game called Valorant!
+                {">"} I spent my college years deeply involved in the collegiate
+                Esports scene, where I learned communication and strategy as the
+                Varsity Captain for the Valorant team.
               </p>
             </div>
             <div className="flex justify-between border-t-2 border-[#1a1a2e] pt-2 font-mono text-xs text-[#4a4a6a]">

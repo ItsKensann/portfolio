@@ -27,16 +27,26 @@ export function HeroSection() {
               {/* Text Side */}
               <div className="flex-1 space-y-4">
                 <p className="font-sans text-lg sm:text-xl md:text-2xl text-[#4a4a6a] leading-relaxed">
-                  Recent Computer Science graduate with a passion for creating,
-                  currently looking for Software Engineering full-time roles.
-                  <br></br>
-                  <br></br>
-                  Feel Free to contact me at:
-                  <Typewriter
-                    text=" itskensann@gmail.com"
-                    delay={20}
-                    className="text-[#1a1a2e]"
-                  />
+                  Recent Computer Science graduate with a passion for
+                  <span className="text-[#1a1a2e] font-medium">
+                    {" "}
+                    creative development.
+                  </span>{" "}
+                  Currently seeking full-time Software Engineering roles.
+                  <br />
+                  <br />
+                  Let's build something together:
+                  <br />
+                  <a
+                    href="mailto:itskensann@gmail.com"
+                    className="hover:underline decoration-wavy decoration-pastel-pink"
+                  >
+                    <Typewriter
+                      text="itskensann@gmail.com"
+                      delay={70}
+                      className="text-[#1a1a2e] font-bold cursor-pointer"
+                    />
+                  </a>
                 </p>
               </div>
 
