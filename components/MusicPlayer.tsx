@@ -12,6 +12,7 @@ const tracks = [
   { name: "happy days", artist: "Kensan", src: "/happy_days.mp3" },
   { name: "restless", artist: "Kensan", src: "/restless.mp3" },
   { name: "playroom", artist: "Kensan", src: "/playroom.mp3" },
+  { name: "old days", artist: "Kensan", src: "/old_days.mp3" },
 ];
 
 export function MusicPlayer() {
