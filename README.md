@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💾 Personal Portfolio
 
-## Getting Started
+A personal portfolio website where I aimed to hit that Windows 95 / Pastel Vaporwave aesthetic.
 
-First, run the development server:
+## 🛠️ Tech Stack
 
+- **Framework:** Next.js 
+- **Language:** TypeScript 
+- **Styling:** Tailwind CSS
+- **Animation:** Framer Motion
+
+## ⚡ Key Features & Implementation
+
+### 1. Retro UI & Layout
+
+- **CSS Scroll Snapping:** The main layout uses `scroll-snap-type: y mandatory` on the parent and `snap-start` on sections to lock the viewport, creating a full-screen "slide" transition effect.
+- **Retro Windows:** Custom components styled with Tailwind. Uses `framer-motion` (`initial`/`whileInView`/`transition`) to animate windows popping up as the user scrolls.
+- **Responsive Design:** Utilizes Tailwind's `sm:` modifiers to adapt layout for screens wider than 640px.
+
+### 2. Animations & Transitions
+
+- **Loading Screen:** Wraps the loader in `AnimatePresence` to enable exit animations, allowing the loading screen to smoothly fade out (`opacity: 0`) before being removed from the React DOM.
+- **Typewriter Effect:** A custom component using `useEffect` and string state to append characters one by one at a 50ms interval.
+
+### 3. Audio Engineering (Music Player)
+
+- **State Management:** Distinguishes between `useState` (for UI rendering like play/pause icons) and `useRef` (to persist the `HTMLAudioElement` without triggering re-renders).
+- **Audio Logic:** Directly targets the browser's audio hardware via the `Audio()` constructor.
+- **Visualizer:** A randomized bar graph that updates every 150ms via `setInterval` when the track is playing.
+
+### 4. Project Modals
+
+- **Event Handling:** Implements `e.stopPropagation()` on the modal window to ensure clicking inside the project details doesn't close the modal, while clicking the backdrop does.
+
+## 🚀 Getting Started
+
+1. **Install dependencies:**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Run the development server:**
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Open** [http://localhost:3000](http://localhost:3000) **with your browser.**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
