@@ -18,8 +18,8 @@ const projects = [
       "Full stack app Columbia Sportswear to retrieve pricing information on any retail item. I developed both the backend pricing API with multi-database architecture and transaction tracking, and the frontend application that integrates multiple microservices to enable customers to scan product UPCs and instantly view accurate, location-specific pricing and product details. Two GitHub links are provided for the frontend and backend service respectively.",
     tech: ["C#", "Blazor", ".NET", "Azure Functions", "Cosmos DB"],
     preview: "/price_checker.png",
-    link: "#",
-    github: "https://github.com/ItsKensann/retail-price-checker",
+    link: "https://github.com/ItsKensann/retail-price-checker",
+    github: "https://github.com/ItsKensann/commerce-pricing-service",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const projects = [
     name_lower_case: "real_time_physiological_sensors",
     icon: "[]",
     description:
-      "Capstone group project for the Human-Machine Teaming Lab at OSU. Developed failure    Closed source - media and details available on request",
+      "Capstone group project in collaboration with the Human-Machine Teaming Lab at OSU to eventually reliable real time communication between humans and robots during disaster scenarios. Improved the accuracy and the throughput of an existing data collection tool for wearable physiological sensors.  [Closed source - media and details available on request]",
     tech: [
       "Python",
       "Dash",
@@ -37,6 +37,7 @@ const projects = [
       "Pupillabs",
       "Zephyr",
     ],
+    preview: "/capstone.png",
     link: "#",
     github: "#",
   },
@@ -63,7 +64,7 @@ const projects = [
     name: "Portfolio website",
     name_lower_case: "portfolio_website",
     icon: "//",
-    description: "The portfolio you are looking at right now!",
+    description: "The portfolio you are looking at right now :]",
     tech: ["Next.js", "Tailwind", "Framer Motion"],
     preview: "/portfolio.gif",
     link: "#",
@@ -190,24 +191,29 @@ export function ProjectsSection() {
                     </div>
 
                     <div className="flex gap-3 t-2">
-                      <a
-                        href={selectedProject.link}
-                        className="flex items-center gap-2 px-3 py-2 bg-[#93c5fd] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] hover:bg-[#7dd3fc] transition-colors shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)]"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Live Demo
-                      </a>
-                      <a
-                        href={selectedProject.github}
-                        className="flex items-center gap-2 px-3 py-2 bg-[#c4b5fd] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] hover:bg-[#a78bfa] transition-colors shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)]"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img className="w-4 h-4" src="/github.svg" />
-                        Source
-                      </a>
+                      {selectedProject.name !==
+                        "Real Time Physiological Sensors" && (
+                        <>
+                          <a
+                            href={selectedProject.link}
+                            className="flex items-center gap-2 px-3 py-2 bg-[#93c5fd] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] hover:bg-[#7dd3fc] transition-colors shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)]"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                            Live Demo
+                          </a>
+                          <a
+                            href={selectedProject.github}
+                            className="flex items-center gap-2 px-3 py-2 bg-[#c4b5fd] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] hover:bg-[#a78bfa] transition-colors shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)]"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img className="w-4 h-4" src="/github.svg" />
+                            Source
+                          </a>
+                        </>
+                      )}
                     </div>
                   </div>
                 </RetroWindow>
