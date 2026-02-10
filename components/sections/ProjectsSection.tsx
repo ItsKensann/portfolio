@@ -11,53 +11,73 @@ import { Typewriter } from "../Typewriter";
 const projects = [
   {
     id: 1,
-    name: "Barcode Price Checker",
+    name: "Columbia Price Checker",
+    name_lower_case: "barcode_price_checker",
     icon: "$$",
     description:
-      "Developed full stack app for Columbia Sportswear to retrieve pricing information on any retail item. Due ",
+      "Full stack app Columbia Sportswear to retrieve pricing information on any retail item. I developed both the backend pricing API with multi-database architecture and transaction tracking, and the frontend application that integrates multiple microservices to enable customers to scan product UPCs and instantly view accurate, location-specific pricing and product details. Two GitHub links are provided for the frontend and backend service respectively.",
     tech: ["C#", "Blazor", ".NET", "Azure Functions", "Cosmos DB"],
+    preview: "/price_checker.png",
     link: "#",
-    github: "#",
+    github: "https://github.com/ItsKensann/retail-price-checker",
   },
   {
     id: 2,
-    name: "Capstone ",
+    name: "Real Time Physiological Sensors",
+    name_lower_case: "real_time_physiological_sensors",
     icon: "[]",
     description:
-      "Grow virtual plants by completing your daily tasks. Gamified productivity!",
-    tech: ["Next.js", "Firebase", "Tailwind"],
+      "Capstone group project for the Human-Machine Teaming Lab at OSU. Developed failure    Closed source - media and details available on request",
+    tech: [
+      "Python",
+      "Dash",
+      "Matplotlib",
+      "XSens",
+      "Myo",
+      "Pupillabs",
+      "Zephyr",
+    ],
     link: "#",
     github: "#",
   },
-  {
-    id: 3,
-    name: "Focus",
-    icon: "{}",
-    description:
-      "Grow virtual plants by completing your daily tasks. Gamified productivity!",
-    tech: ["Next.js", "Firebase", "Tailwind"],
-    link: "#",
-    github: "#",
-  },
-  {
-    id: 4,
-    name: "Posture checker",
-    icon: "<>",
-    description:
-      "Grow virtual plants by completing your daily tasks. Gamified productivity!",
-    tech: ["Next.js", "Firebase", "Tailwind"],
-    link: "#",
-    github: "#",
-  },
+  // {
+  //   id: 3,
+  //   name: "Focus",
+  //   icon: "{}",
+  //   description: "",
+  //   tech: ["React", "Express.js", "Node.js", "MongoDB"],
+  //   link: "#",
+  //   github: "#",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Posture checker",
+  //   icon: "<>",
+  //   description: "",
+  //   tech: ["Next.js", "Firebase", "Tailwind"],
+  //   link: "#",
+  //   github: "#",
+  // },
   {
     id: 5,
     name: "Portfolio website",
+    name_lower_case: "portfolio_website",
     icon: "//",
     description: "The portfolio you are looking at right now!",
-    tech: ["Next.js", "Tailwind", "Supabase"],
+    tech: ["Next.js", "Tailwind", "Framer Motion"],
+    preview: "/portfolio.gif",
     link: "#",
     github: "https://github.com/ItsKensann/portfolio",
   },
+  // {
+  //   id: 6,
+  //   name: "Slow n reverb",
+  //   icon: "<>",
+  //   description: "",
+  //   tech: ["Next.js", "Firebase", "Tailwind"],
+  //   link: "#",
+  //   github: "#",
+  // },
 ];
 
 export function ProjectsSection() {
@@ -128,69 +148,92 @@ export function ProjectsSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-[#1a1a2e]/50 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-[#1a1a2e]/50 z-50 overflow-x-auto flex items-center justify-start p-8"
             onClick={() => setSelectedProject(null)}
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <RetroWindow
-                title={`${selectedProject.name}.exe`}
-                variant="lavender"
-                onClose={() => setSelectedProject(null)}
-                className="w-full max-w-lg"
+            <div className="flex flex-nowrap items-center gap-20 m-auto min-w-max">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                onClick={(e) => e.stopPropagation()}
               >
-                <div className="space-y-6">
-                  <div className="flex items-center gap-3">
-                    <span className="text-2xl font-mono bg-[#a78bfa] px-2 py-1 border-2 border-[#1a1a2e]">
-                      {selectedProject.icon}
-                    </span>
-                    <h3 className="font-mono text-xl sm:text-2xl text-[#1a1a2e]">
-                      {selectedProject.name}
-                    </h3>
-                  </div>
-
-                  <p className="font-sans text-lg sm:text-xl text-[#4a4a6a] leading-relaxed">
-                    {selectedProject.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-3 mt-12">
-                    {selectedProject.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="p-2 bg-[#a78bfa] border-2 border-[#1a1a2e] font-mono text-xs text-[#1a1a2e]"
-                      >
-                        {tech}
+                <RetroWindow
+                  title={`${selectedProject.name_lower_case}.exe`}
+                  variant="lavender"
+                  onClose={() => setSelectedProject(null)}
+                  className="w-full max-w-lg"
+                >
+                  <div className="space-y-6">
+                    <div className="flex items-center gap-3">
+                      <span className="text-2xl font-mono bg-[#a78bfa] px-2 py-1 border-2 border-[#1a1a2e]">
+                        {selectedProject.icon}
                       </span>
-                    ))}
-                  </div>
+                      <h3 className="font-mono text-xl sm:text-2xl text-[#1a1a2e]">
+                        {selectedProject.name}
+                      </h3>
+                    </div>
 
-                  <div className="flex gap-3 t-2">
-                    <a
-                      href={selectedProject.link}
-                      className="flex items-center gap-2 px-3 py-2 bg-[#93c5fd] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] hover:bg-[#7dd3fc] transition-colors shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)]"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </a>
-                    <a
-                      href={selectedProject.github}
-                      className="flex items-center gap-2 px-3 py-2 bg-[#c4b5fd] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] hover:bg-[#a78bfa] transition-colors shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)]"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img className="w-4 h-4" src="/github.svg" />
-                      Source
-                    </a>
+                    <p className="font-sans text-lg sm:text-xl text-[#4a4a6a] leading-relaxed">
+                      {selectedProject.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-3 mt-12">
+                      {selectedProject.tech.map((tech) => (
+                        <span
+                          key={tech}
+                          className="p-2 bg-[#a78bfa] border-2 border-[#1a1a2e] font-mono text-xs text-[#1a1a2e]"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="flex gap-3 t-2">
+                      <a
+                        href={selectedProject.link}
+                        className="flex items-center gap-2 px-3 py-2 bg-[#93c5fd] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] hover:bg-[#7dd3fc] transition-colors shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)]"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Live Demo
+                      </a>
+                      <a
+                        href={selectedProject.github}
+                        className="flex items-center gap-2 px-3 py-2 bg-[#c4b5fd] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] hover:bg-[#a78bfa] transition-colors shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)]"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img className="w-4 h-4" src="/github.svg" />
+                        Source
+                      </a>
+                    </div>
                   </div>
-                </div>
-              </RetroWindow>
-            </motion.div>
+                </RetroWindow>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <RetroWindow
+                  title="preview.exe"
+                  onClose={() => setSelectedProject(null)}
+                  className="w-full max-w-xl"
+                >
+                  <div className="flex w-full h-full bg-black border-2 border-[#1a1a2e] overflow-hidde">
+                    <img
+                      src={selectedProject.preview}
+                      alt={selectedProject.name}
+                      className="w-full h-full object-cover grayscale-[20%] contrast-[1.1]"
+                    />
+                  </div>
+                </RetroWindow>
+              </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

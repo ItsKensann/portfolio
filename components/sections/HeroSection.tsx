@@ -35,7 +35,7 @@ export function HeroSection() {
                   Currently seeking full-time Software Engineering roles.
                   <br />
                   <br />
-                  Let's build something together:
+                  Let's build something together {":)"}
                   <br />
                   <a
                     href="mailto:itskensann@gmail.com"

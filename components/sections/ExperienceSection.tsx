@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { BookUser } from "lucide-react";
 import { motion } from "framer-motion";
 import { RetroWindow } from "@/components/RetroWindow";
 import { FolderOpen, FileText, ChevronRight, Folder } from "lucide-react";
@@ -11,32 +13,35 @@ const experiences = [
     company: "Columbia Sportswear",
     period: "May 2025 - Jul 2025",
     description:
-      "Leading the frontend team, building scalable React applications.",
+      "Worked with the retail technology team to develop a price checker application for users to receive personalized pricing based on store location.",
     icon: ">>",
   },
+
   {
     id: 2,
+    role: "Undergraduate Teaching Assitant",
+    company: "Oregon State University",
+    period: "Sep 2024 - May 2025",
+    description:
+      "Led class recitation sessions, held Zoom office hour sessions and graded student projects.",
+    icon: "->",
+  },
+  {
+    id: 3,
     role: "Software Engineer Intern",
     company: "Safe Harbor Solutions",
     period: "June 2024 - Sep 2024",
     description:
-      "Built custom web solutions for various clients using modern tech stacks.",
+      "Collaborated with 5 other developers to build a React web-based Power BI alternative for Frontier Senior Living, displaying labor statistics for 106 senior living communities across 19 states.",
     icon: "=>",
-  },
-  {
-    id: 3,
-    role: "Undergraduate Teaching Assitant",
-    company: "Startup Labs",
-    period: "2019 - 2021",
-    description: "Started my journey building MVPs and learning the ropes.",
-    icon: "->",
   },
   {
     id: 4,
     role: "Community Assitant",
-    company: "Self-Employed",
-    period: "2018 - 2019",
-    description: "Created pixel art and UI designs for indie game projects.",
+    company: "Oregon State University",
+    period: "June 2022 - June 2024",
+    description:
+      "Developed strong communication and collaboration skills by organizing community events, fostering a supportive and inclusive environment for over 400 residents.",
     icon: "~~",
   },
 ];
@@ -108,6 +113,16 @@ export function ExperienceSection() {
             </div>
           </div>
         </RetroWindow>
+
+        <Link href="/resume" className="flex items-center justify-center mt-8">
+          <button
+            type="button"
+            className="mt-2 flex items-center gap-2 px-4 py-2 bg-[#7dd3fc] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] transition-colors hover:bg-[#33BBFA] shadow-[4px_4px_0px_0px_rgba(26,26,46,0.8)] hover:shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)] hover:translate-x-[2px] hover:translate-y-[2px] hover:cursor-pointer"
+          >
+            <BookUser className="w-6 h-6" />
+            View Full Resume
+          </button>
+        </Link>
       </motion.div>
     </section>
   );

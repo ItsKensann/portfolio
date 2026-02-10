@@ -43,7 +43,7 @@ export default function Home() {
         <>
           {/* background */}
           <div
-            className="fixed inset-0 z-0 font-sans"
+            className="fixed inset-0 z-0 font-sans animate-grid-flow"
             style={{
               backgroundColor: "#D6C8FF",
               backgroundImage: `
@@ -86,9 +86,6 @@ export default function Home() {
                     src={`${social.icon}.svg`}
                   />
                 </div>
-                {/* <span className="font-mono text-xs sm:text-sm text-[#1a1a2e]">
-                  {social.name}
-                </span> */}
               </motion.a>
             ))}
           </motion.div>

@@ -79,6 +79,25 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@keyframes grid-flow {
+  0% {
+    background-position:
+      0 0,
+      0 0,
+      0 0;
+  }
+  100% {
+    background-position:
+      46px 46px,
+      46px 46px,
+      0 0;
+  }
+}
+
+.animate-grid-flow {
+  animation: grid-flow 6s linear infinite;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
