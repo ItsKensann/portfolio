@@ -35,15 +35,15 @@ const experiences = [
       "Collaborated with 5 other developers to build a React web-based Power BI alternative for Frontier Senior Living, displaying labor statistics for 106 senior living communities across 19 states.",
     icon: "=>",
   },
-  {
-    id: 4,
-    role: "Community Assitant",
-    company: "Oregon State University",
-    period: "June 2022 - June 2024",
-    description:
-      "Developed strong communication and collaboration skills by organizing community events, fostering a supportive and inclusive environment for over 400 residents.",
-    icon: "~~",
-  },
+  // {
+  //   id: 4,
+  //   role: "Community Assitant",
+  //   company: "Oregon State University",
+  //   period: "June 2022 - June 2024",
+  //   description:
+  //     "Developed strong communication and collaboration skills by organizing community events, fostering a supportive and inclusive environment for over 400 residents.",
+  //   icon: "~~",
+  // },
 ];
 
 export function ExperienceSection() {

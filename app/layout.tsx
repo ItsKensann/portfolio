@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import { VT323, Press_Start_2P } from "next/font/google";
+import {
+  VT323,
+  Share_Tech_Mono,
+  JetBrains_Mono,
+  Press_Start_2P,
+} from "next/font/google";
 import "./globals.css";
 
-const vt323 = VT323({
-  weight: "400",
+const vt323 = JetBrains_Mono({
+  weight: "300",
   subsets: ["latin"],
   variable: "--font-vt323",
 });

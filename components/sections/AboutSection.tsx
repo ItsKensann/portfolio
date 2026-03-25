@@ -43,7 +43,7 @@ export function AboutSection() {
             </div>
 
             {/* Text box */}
-            <div className="bg-[#f5f0ff] border-2 border-[#1a1a2e] p-4 min-h-[300px] font-sans text-lg sm:text-xl md:text-2xl text-[#1a1a2e] leading-relaxed">
+            <div className="bg-[#f5f0ff] border-2 border-[#1a1a2e] p-4 min-h-[300px] font-sans text-lg sm:text-xl md:text-xl text-[#1a1a2e] leading-relaxed">
               <p className="mb-4">
                 {">"} I was introduced to computer science through a UI course
                 in high school. Coming from an art background, I was immediately
