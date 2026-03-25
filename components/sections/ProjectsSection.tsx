@@ -11,6 +11,7 @@ const projects = [
   {
     id: 1,
     name: "Focus",
+    name_lower_case: "focus",
     icon: "{}",
     description:
       "Developed Focus to solve my own need for a distraction-free workspace. It’s a full-stack MERN app featuring a Pomodoro timer that stays in sync across tabs and a suite of task management and journaling tools. To keep the UI snappy, I used TanStack Query for instant updates and designed a custom backend to feed a personalized analytics dashboard. I also integrated Gemini AI to give users specific, data-driven productivity insights.",
