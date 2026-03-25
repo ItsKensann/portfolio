@@ -163,6 +163,7 @@ export function ProjectsSection() {
                   variant="lavender"
                   onClose={() => setSelectedProject(null)}
                   className="w-full max-w-lg"
+                  windowButtons={true}
                 >
                   <div className="space-y-6">
                     <div className="flex items-center gap-3">
@@ -228,6 +229,7 @@ export function ProjectsSection() {
                   title="preview.exe"
                   onClose={() => setSelectedProject(null)}
                   className="w-full max-w-xl"
+                  windowButtons={true}
                 >
                   <div className="flex w-full h-full bg-black border-2 border-[#1a1a2e] overflow-hidde">
                     <img

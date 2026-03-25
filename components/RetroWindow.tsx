@@ -11,6 +11,7 @@ interface RetroWindowProps {
   variant?: "purple" | "blue" | "lavender" | "sky";
   onClose?: () => void;
   draggable?: boolean;
+  windowButtons?: boolean;
 }
 
 const variantStyles = {
@@ -34,6 +35,7 @@ export function RetroWindow({
   variant = "purple",
   onClose,
   draggable = false,
+  windowButtons = false,
 }: RetroWindowProps) {
   const Component = motion.div;
 
@@ -54,30 +56,34 @@ export function RetroWindow({
         <span className="font-mono text-[10px] sm:text-xs text-[#1a1a2e] truncate">
           {title}
         </span>
-        <div className="flex gap-1">
-          <button
-            type="button"
-            className="w-4 h-4 sm:w-5 sm:h-5 bg-[#93c5fd] border-2 border-[#1a1a2e] flex items-center justify-center hover:bg-[#7dd3fc] transition-colors"
-            aria-label="Minimize"
-          >
-            <Minus className="w-2 h-2 sm:w-3 sm:h-3 text-[#1a1a2e]" />
-          </button>
-          <button
-            type="button"
-            className="w-4 h-4 sm:w-5 sm:h-5 bg-[#a78bfa] border-2 border-[#1a1a2e] flex items-center justify-center hover:bg-[#8b5cf6] transition-colors"
-            aria-label="Maximize"
-          >
-            <Square className="w-2 h-2 sm:w-3 sm:h-3 text-[#1a1a2e]" />
-          </button>
-          <button
-            type="button"
-            className="w-4 h-4 sm:w-5 sm:h-5 bg-[#ff6b6b] border-2 border-[#1a1a2e] flex items-center justify-center hover:bg-[#ff5252] transition-colors"
-            onClick={onClose}
-            aria-label="Close"
-          >
-            <X className="w-2 h-2 sm:w-3 sm:h-3 text-[#1a1a2e]" />
-          </button>
-        </div>
+        {windowButtons && (
+          <>
+            <div className="flex gap-1">
+              <button
+                type="button"
+                className="w-4 h-4 sm:w-5 sm:h-5 bg-[#93c5fd] border-2 border-[#1a1a2e] flex items-center justify-center hover:bg-[#7dd3fc] transition-colors"
+                aria-label="Minimize"
+              >
+                <Minus className="w-2 h-2 sm:w-3 sm:h-3 text-[#1a1a2e]" />
+              </button>
+              <button
+                type="button"
+                className="w-4 h-4 sm:w-5 sm:h-5 bg-[#a78bfa] border-2 border-[#1a1a2e] flex items-center justify-center hover:bg-[#8b5cf6] transition-colors"
+                aria-label="Maximize"
+              >
+                <Square className="w-2 h-2 sm:w-3 sm:h-3 text-[#1a1a2e]" />
+              </button>
+              <button
+                type="button"
+                className="w-4 h-4 sm:w-5 sm:h-5 bg-[#ff6b6b] border-2 border-[#1a1a2e] flex items-center justify-center hover:bg-[#ff5252] transition-colors"
+                onClick={onClose}
+                aria-label="Close"
+              >
+                <X className="w-2 h-2 sm:w-3 sm:h-3 text-[#1a1a2e]" />
+              </button>
+            </div>
+          </>
+        )}
       </div>
       {/* body content */}
       <div className="p-3 sm:p-4">{children}</div>
