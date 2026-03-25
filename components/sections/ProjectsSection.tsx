@@ -10,6 +10,25 @@ import { Typewriter } from "../Typewriter";
 const projects = [
   {
     id: 1,
+    name: "Focus",
+    icon: "{}",
+    description:
+      "Focus is a full-stack MERN application designed to foster deep work through a distraction-free, minimalist interface. I engineered a resilient, tab-safe Pomodoro timer that seamlessly syncs via local storage, alongside robust task management and journaling engines. The application leverages a custom Backend-for-Frontend (BFF) architecture to power a dynamic analytics dashboard, and integrates Google Gemini AI to generate highly personalized, JSON-structured productivity insights. Built with React, Tailwind CSS, and TanStack Query, Focus prioritizes instantaneous UI updates, strict data schema enforcement, and a seamless user experience.",
+    tech: [
+      "React",
+      "Express.js",
+      "Node.js",
+      "MongoDB",
+      "TanStack Query",
+      "Google Gemini API",
+    ],
+    preview: "/focus.png",
+    link: "https://focus-two-zeta.vercel.app/",
+    github: "https://github.com/ItsKensann/focus",
+  },
+
+  {
+    id: 2,
     name: "Columbia Price Checker",
     name_lower_case: "barcode_price_checker",
     icon: "$$",
@@ -21,7 +40,7 @@ const projects = [
     github: "https://github.com/ItsKensann/commerce-pricing-service",
   },
   {
-    id: 2,
+    id: 3,
     name: "Real Time Physiological Sensors",
     name_lower_case: "real_time_physiological_sensors",
     icon: "[]",
@@ -40,24 +59,18 @@ const projects = [
     link: "#",
     github: "#",
   },
-  // {
-  //   id: 3,
-  //   name: "Focus",
-  //   icon: "{}",
-  //   description: "",
-  //   tech: ["React", "Express.js", "Node.js", "MongoDB"],
-  //   link: "#",
-  //   github: "#",
-  // },
-  // {
-  //   id: 4,
-  //   name: "Posture checker",
-  //   icon: "<>",
-  //   description: "",
-  //   tech: ["Next.js", "Firebase", "Tailwind"],
-  //   link: "#",
-  //   github: "#",
-  // },
+  {
+    id: 4,
+    name: "SwiftPark",
+    name_lower_case: "swiftpark",
+    icon: "<>",
+    description:
+      "SwiftPark is an in-progress real-time parking occupancy system that uses computer vision to detect vehicle presence in parking lots. Built a YOLOv8-powered detection pipeline that processes camera feeds, counts vehicles, and determines per-spot availability. The backend exposes live occupancy data via a FastAPI REST and WebSocket API, enabling a frontend map UI where users can see which spots are open in real time. Designed with a B2B model in mind, targeting parking garage operators.",
+    tech: ["Python", "YOLOv8", "OpenCV", "FastAPI", "WebSocket"],
+    preview: "/swiftpark.png",
+    link: "#",
+    github: "https://github.com/ItsKensann/parking_cv",
+  },
   {
     id: 5,
     name: "Portfolio website",
@@ -191,28 +204,27 @@ export function ProjectsSection() {
                     </div>
 
                     <div className="flex gap-3 t-2">
-                      {selectedProject.name !==
-                        "Real Time Physiological Sensors" && (
-                        <>
-                          <a
-                            href={selectedProject.link}
-                            className="flex items-center gap-2 px-3 py-2 bg-[#93c5fd] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] hover:bg-[#7dd3fc] transition-colors shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)]"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <ExternalLink className="w-4 h-4" />
-                            Live Demo
-                          </a>
-                          <a
-                            href={selectedProject.github}
-                            className="flex items-center gap-2 px-3 py-2 bg-[#c4b5fd] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] hover:bg-[#a78bfa] transition-colors shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)]"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <img className="w-4 h-4" src="/github.svg" />
-                            Source
-                          </a>
-                        </>
+                      {selectedProject.link !== "#" && (
+                        <a
+                          href={selectedProject.link}
+                          className="flex items-center gap-2 px-3 py-2 bg-[#93c5fd] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] hover:bg-[#7dd3fc] transition-colors shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)]"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          Live Demo
+                        </a>
+                      )}
+                      {selectedProject.github !== "#" && (
+                        <a
+                          href={selectedProject.github}
+                          className="flex items-center gap-2 px-3 py-2 bg-[#c4b5fd] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] hover:bg-[#a78bfa] transition-colors shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)]"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img className="w-4 h-4" src="/github.svg" />
+                          Source
+                        </a>
                       )}
                     </div>
                   </div>
