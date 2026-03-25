@@ -13,7 +13,7 @@ const projects = [
     name: "Focus",
     icon: "{}",
     description:
-      "Focus is a full-stack MERN application designed to foster deep work through a distraction-free, minimalist interface. I engineered a resilient, tab-safe Pomodoro timer that seamlessly syncs via local storage, alongside robust task management and journaling engines. The application leverages a custom Backend-for-Frontend (BFF) architecture to power a dynamic analytics dashboard, and integrates Google Gemini AI to generate highly personalized, JSON-structured productivity insights. Built with React, Tailwind CSS, and TanStack Query, Focus prioritizes instantaneous UI updates, strict data schema enforcement, and a seamless user experience.",
+      "Developed Focus to solve my own need for a distraction-free workspace. It’s a full-stack MERN app featuring a Pomodoro timer that stays in sync across tabs and a suite of task management and journaling tools. To keep the UI snappy, I used TanStack Query for instant updates and designed a custom backend to feed a personalized analytics dashboard. I also integrated Gemini AI to give users specific, data-driven productivity insights.",
     tech: [
       "React",
       "Express.js",
