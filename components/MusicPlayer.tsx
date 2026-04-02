@@ -89,11 +89,11 @@ export function MusicPlayer() {
       <RetroWindow
         title="lofi_player.exe"
         variant="lavender"
-        className="w-56 sm:w-64"
+        className="w-56 sm:w-44 2xl:w-64"
       >
         {/* Audio visualizer */}
         <div className="space-y-3">
-          <div className="bg-[#1a1a2e] p-2 flex items-end justify-center gap-1 h-16">
+          <div className="hidden sm:flex bg-[#1a1a2e] p-2 items-end justify-center gap-1 h-16">
             {bars.map((height, i) => (
               <motion.div
                 key={i}

@@ -21,7 +21,7 @@ const colors = ["#a78bfa", "#93a3fd", "#c4b5fd", "#cb7dfc"];
 
 export function FloatingDecorations() {
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-10">
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-5">
       {decorations.map((dec, i) => (
         <motion.div
           key={i}

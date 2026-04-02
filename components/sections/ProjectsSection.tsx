@@ -162,7 +162,7 @@ export function ProjectsSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-[#1a1a2e]/50 z-50 overflow-x-auto flex items-center justify-start p-8"
+            className="fixed inset-0 bg-[#1a1a2e]/50 z-[100] overflow-x-auto flex items-center justify-start p-8"
             onClick={() => setSelectedProject(null)}
           >
             <div className="flex flex-nowrap items-center gap-20 m-auto min-w-max">
