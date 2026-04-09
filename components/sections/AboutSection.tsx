@@ -24,26 +24,26 @@ export function AboutSection() {
         >
           <div className="space-y-4">
             {/* Notepad toolbar */}
-            <div className="flex gap-4 border-b-2 border-[#1a1a2e] pb-2 mb-4">
-              <span className="font-mono text-sm text-[#4a4a6a] underline cursor-pointer hover:text-[#3365FA]">
+            <div className="flex gap-2 sm:gap-4 text-xs sm:text-sm border-b-2 border-[#1a1a2e] pb-2 mb-4">
+              <span className="font-mono text-[#4a4a6a] underline cursor-pointer hover:text-[#3365FA]">
                 File
               </span>
-              <span className="font-mono text-sm text-[#4a4a6a] underline cursor-pointer hover:text-[#3365FA]">
+              <span className="font-mono text-[#4a4a6a] underline cursor-pointer hover:text-[#3365FA]">
                 Edit
               </span>
-              <span className="font-mono text-sm text-[#4a4a6a] underline cursor-pointer hover:text-[#3365FA]">
+              <span className="font-mono text-[#4a4a6a] underline cursor-pointer hover:text-[#3365FA]">
                 Format
               </span>
-              <span className="font-mono text-sm text-[#4a4a6a] underline cursor-pointer hover:text-[#3365FA]">
+              <span className="font-mono text-[#4a4a6a] underline cursor-pointer hover:text-[#3365FA]">
                 View
               </span>
-              <span className="font-mono text-sm text-[#4a4a6a] underline cursor-pointer hover:text-[#3365FA]">
+              <span className="font-mono text-[#4a4a6a] underline cursor-pointer hover:text-[#3365FA]">
                 Help
               </span>
             </div>
 
             {/* Text box */}
-            <div className="bg-[#f5f0ff] border-2 border-[#1a1a2e] p-4 min-h-[300px] font-sans text-lg sm:text-xl md:text-xl text-[#1a1a2e] leading-relaxed">
+            <div className="bg-[#f5f0ff] border-2 border-[#1a1a2e] p-4 min-h-[300px] font-sans text-sm md:text-lg lg:text-lg text-[#1a1a2e] leading-relaxed">
               <p className="mb-4">
                 {">"} I was introduced to computer science through a UI course
                 in high school. Coming from an art background, I was immediately

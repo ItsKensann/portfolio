@@ -121,7 +121,8 @@ export function ProjectsSection({
             {/* File path toolbar */}
             <div className="flex gap-2 border-b-2 border-[#1a1a2e] pb-2">
               <span className="font-mono text-xs sm:text-sm text-[#4a4a6a]">
-                C:\Users\kensan_putra\projects
+                C:<span className="hidden sm:inline">\Users\kensan_putra</span>
+                \projects
               </span>
             </div>
 

@@ -61,7 +61,7 @@ export default function Home() {
 
           <MusicPlayer />
 
-          <motion.div className="fixed bottom-4 left-4 z-50 flex flex-col 2xl:flex-row gap-3 items-start md:items-center">
+          <motion.div className="hidden sm:flex fixed bottom-4 left-4 z-50 flex-col 2xl:flex-row gap-3 items-start md:items-center">
             {socialLinks.map((social, index) => (
               <motion.a
                 key={social.name}
