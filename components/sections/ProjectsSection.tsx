@@ -1,10 +1,16 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
+import { Project } from "@/types/project";
 import { useState } from "react";
 import { Folder, ExternalLink, createLucideIcon, Github } from "lucide-react";
 import { RetroWindow } from "@/components/RetroWindow";
 import { Typewriter } from "../Typewriter";
+
+interface ProjectsSectionProps {
+  selectedProject: Project | null;
+  setSelectedProject: (projectInput: Project | null) => void;
+}
 
 // temp projects array before i create them on the supabase database
 const projects = [
@@ -94,11 +100,10 @@ const projects = [
   // },
 ];
 
-export function ProjectsSection() {
-  const [selectedProject, setSelectedProject] = useState<
-    (typeof projects)[0] | null
-  >(null);
-
+export function ProjectsSection({
+  selectedProject,
+  setSelectedProject,
+}: ProjectsSectionProps) {
   return (
     <section
       id="projects"

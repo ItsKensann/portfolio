@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Project } from "@/types/project";
 import { motion } from "framer-motion";
 import { LoadingScreen } from "@/components/LoadingScreen";
 import { FloatingDecorations } from "@/components/FloatingDecorations";
@@ -34,6 +35,8 @@ const socialLinks = [
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
   return (
     <>
       {/* isLoading starts true, trigger loading bar  */}
