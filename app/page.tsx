@@ -11,7 +11,6 @@ import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
-// lucide-react doesn' support brand specific icons due to legal restrications so manually download svg files
 const socialLinks = [
   {
     name: "GitHub",
@@ -39,7 +38,6 @@ export default function Home() {
 
   return (
     <>
-      {/* isLoading starts true, trigger loading bar  */}
       {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
 
       {!isLoading && (
@@ -59,7 +57,6 @@ export default function Home() {
             }}
           />
 
-          {/* Floating decoration */}
           <FloatingDecorations />
 
           <MusicPlayer />
@@ -92,17 +89,20 @@ export default function Home() {
               </motion.a>
             ))}
           </motion.div>
-          {/* Main content */}
+
           <main
-            className="relative z-10 h-screen overflow-y-auto"
+            className={`relative h-screen overflow-y-auto ${
+              selectedProject ? "z-[200]" : "z-10"
+            }`}
             style={{ scrollSnapType: "y mandatory", scrollBehavior: "smooth" }}
           >
             <HeroSection />
             <AboutSection />
-            <ProjectsSection />
+            <ProjectsSection
+              selectedProject={selectedProject}
+              setSelectedProject={setSelectedProject}
+            />
             <ExperienceSection />
-
-            {/* <ContactSection /> */}
           </main>
         </>
       )}
