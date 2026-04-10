@@ -26,7 +26,7 @@ export function HeroSection() {
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
               {/* Text Side */}
               <div className="flex-1 space-y-4">
-                <p className="font-sans text-lg sm:text-xl md:text-2xl text-[#4a4a6a] leading-relaxed">
+                <p className="font-sans text-md md:text-base lg:text-2xl text-[#4a4a6a] leading-relaxed">
                   Recent Computer Science graduate with a passion for
                   <span className="text-[#1a1a2e] font-medium">
                     {" "}

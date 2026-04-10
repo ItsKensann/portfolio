@@ -163,6 +163,7 @@ export function ProjectsSection({
 
       {/* Project modal to appear when project is clicked */}
       <AnimatePresence>
+        {/* once the user selects a project in the retro window */}
         {selectedProject && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -182,7 +183,7 @@ export function ProjectsSection({
                   title={`${selectedProject.name_lower_case}.exe`}
                   variant="lavender"
                   onClose={() => setSelectedProject(null)}
-                  className="w-full max-w-lg"
+                  className="w-[85vw] sm:w-full sm:max-w-lg"
                   windowButtons={true}
                 >
                   <div className="space-y-6">
@@ -195,7 +196,7 @@ export function ProjectsSection({
                       </h3>
                     </div>
 
-                    <p className="font-sans text-lg sm:text-xl text-[#4a4a6a] leading-relaxed">
+                    <p className="font-sans text-sm md:text-base 2xl:text-lg text-[#4a4a6a] leading-relaxed">
                       {selectedProject.description}
                     </p>
 
@@ -243,6 +244,7 @@ export function ProjectsSection({
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 onClick={(e) => e.stopPropagation()}
+                className="hidden sm:inline"
               >
                 <RetroWindow
                   title="preview.exe"
@@ -250,7 +252,7 @@ export function ProjectsSection({
                   className="w-full max-w-xl"
                   windowButtons={true}
                 >
-                  <div className="flex w-full h-full bg-black border-2 border-[#1a1a2e] overflow-hidde">
+                  <div className="flex w-full h-full bg-black border-2 border-[#1a1a2e] overflow-hidden">
                     <img
                       src={selectedProject.preview}
                       alt={selectedProject.name}

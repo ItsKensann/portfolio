@@ -50,7 +50,7 @@ export function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8 snap-start"
+      className="min-h-screen flex items-center justify-center p-4 snap-start"
     >
       <motion.div
         initial={{ opacity: 0, x: 50 }}
@@ -62,13 +62,14 @@ export function ExperienceSection() {
         <RetroWindow
           title="experience.sys"
           variant="lavender"
-          className="w-full"
+          className="w-full "
         >
-          <div className="space-y-2 font-mono text-sm sm:text-base">
+          <div className="font-mono text-sm sm:text-base">
             <div className="flex items-center gap-2">
               <FolderOpen className="w-5 h-5 text-[#a78bfa] fill-[#c4b5fd] stroke-[#1a1a2e]" />
-              <span className="text-[#4a4a6a]">
-                C:\Users\kensan_putra\experience
+              <span className="text-[#4a4a6a] text-xs sm:text-sm">
+                C:<span className="hidden sm:inline">\Users\kensan_putra</span>
+                \experience
               </span>
             </div>
 
@@ -92,17 +93,14 @@ export function ExperienceSection() {
                         <FileText className="w-5 h-5 text-[#a78bfa] stroke-[#1a1a2e]" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-medium text-[#1a1a2e] text-base sm:text-lg">
+                        <h3 className="font-medium text-[#1a1a2e] text-xs sm:text-sm 2xl:text-base">
                           {job.role}
                         </h3>
-                        <div className="flex items-center gap-2 mt-1 text-[#4a4a6a] text-xs sm:text-sm">
+                        <div className="flex items-center gap-2 mt-1 text-[#4a4a6a] text-xs sm:text-sm 2xl:text-base">
                           <ChevronRight className="w-4 h-4" />
                           <span>{job.company}</span>
-                          <span className="px-2 py-0.5 bg-[#93c5fd] border border-[#1a1a2e] text-xs">
-                            {job.period}
-                          </span>
                         </div>
-                        <p className="mt-2 text-[#4a4a6a] text-sm sm:text-lg font-sans leading-relaxed">
+                        <p className="mt-2 text-[#4a4a6a] text-xs sm:text-sm 2xl:text-lg font-sans leading-relaxed">
                           {job.description}
                         </p>
                       </div>
@@ -117,7 +115,7 @@ export function ExperienceSection() {
         <Link href="/resume" className="flex items-center justify-center mt-8">
           <button
             type="button"
-            className="mt-2 flex items-center gap-2 px-4 py-2 bg-[#7dd3fc] border-2 border-[#1a1a2e] font-mono text-sm text-[#1a1a2e] transition-colors hover:bg-[#33BBFA] shadow-[4px_4px_0px_0px_rgba(26,26,46,0.8)] hover:shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)] hover:translate-x-[2px] hover:translate-y-[2px] hover:cursor-pointer"
+            className="sm:mt-2 flex items-center gap-2 px-4 py-2 bg-[#7dd3fc] border-2 border-[#1a1a2e] font-mono text-xs 2xl:text-sm text-[#1a1a2e] transition-colors hover:bg-[#33BBFA] shadow-[4px_4px_0px_0px_rgba(26,26,46,0.8)] hover:shadow-[2px_2px_0px_0px_rgba(26,26,46,0.8)] hover:translate-x-[2px] hover:translate-y-[2px] hover:cursor-pointer"
           >
             <BookUser className="w-6 h-6" />
             View Full Resume
