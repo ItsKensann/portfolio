@@ -20,7 +20,22 @@ const pressStart = Press_Start_2P({
 
 export const metadata: Metadata = {
   title: "itskensan.dev",
-  description: "Kensan Putra developer portfolio",
+  description: "Kensan Putra Developer Portfolio",
+  openGraph: {
+    title: `itskensan.dev`,
+    description: "Kensan Putra Developer Portfolio",
+    url: "https://itskensan.dev",
+    images: [
+      {
+        url: "/website_preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Kensan Putra Portfolio Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
