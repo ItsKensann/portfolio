@@ -76,7 +76,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
           </motion.div>
 
           <RetroWindow
-            title="system.exe Loading..."
+            title="system.exe"
             variant="sky"
             className="w-[90%] max-w-md"
           >
